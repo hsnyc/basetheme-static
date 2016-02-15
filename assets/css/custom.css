@@ -75,6 +75,10 @@ p {
     background-color: #eee;
 }
 
+.download {
+    margin: 10px 0 0 10px;
+}
+
 #home section {
   padding-bottom: 40px;
 }
