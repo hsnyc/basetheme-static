@@ -1,3 +1,21 @@
+// === Less me === //
+
+// fonts
+@reg-font: 1.6rem;
+@font-family: 'montserrat', Helvetica, sans-serif;
+
+//colors
+@dark-grey: #888;
+@bg-grey: #eee;
+
+//Based on a root Pixel value of: 10
+// 1rem = 10px
+// 1em = 10px
+// 1px = 0.1rem
+
+@phi: 1.618;
+@px: 0.1rem;
+
 /*====================
 TABLE OF CONTENTS:
 ======================
@@ -15,87 +33,99 @@ COLOUR REFERENCES
 Dark Gray:	#888
 Bg Gray:    #eee
 
-
 /* ==== GENERAL ==== */
 
+html {
+	font-size: 62.5%; // 10px
+}
+
 body {
-	font-family: 'montserrat', Helvetica, sans-serif;
-	font-size: 16px;
+  font-family: @font-family;
+  font-size: 16*@px;
 }
 
 /* ==== GLOBAL ==== */
 
-h1,h2,h3,h4,h5,h6 {
-	-webkit-font-smoothing: antialiased;
-	text-rendering: optimizelegibility;
-	font-weight: bold;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-weight: bold;
 }
 
 h1 {
-	font-size: 3em;
+  font-size: 30*@px;
 }
 
-h1,h2 {
-	margin: 0 0 40px;
+h1,
+h2 {
+  margin: 0 0 1.5em;
 }
 
 h3 {
-	margin: 20px 0;
+  margin: 2em 0;
 }
 
 h4 {
-	font-size: 18px;
+  font-size: 18*@px;
 }
 
 a {
-    color: #000;
-}
+  color: #000;
 
-a:hover, a:focus {
-    color: #888;
+  &:hover,
+  &:focus {
+    color: @dark-grey;
+  }
 }
 
 p {
-	font-weight: 400;
+  font-weight: 400;
 }
 
 .dropdown-menu {
-    border: none;
-    box-shadow: none;
-	background-color: #eee;
-}
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: @bg-grey;
 
-.dropdown-menu > li > a {
-	color: #888;
+  > li > a {
+	color: @dark-grey;
+  }
 }
 
 .navbar-toggle {
-    border: none;
+  border: none;
+
+  .icon-bar {
+	background-color: #000;
+  }
 }
 
-.navbar-toggle .icon-bar {
-    background-color: #000;
+
+.current-menu-item {
+    background-color: #eee;
+}
+
+nav a.download {
+    margin: 1em 0 0 1em;
 }
 
 #home section {
-	padding-bottom: 40px;
+  padding-bottom: 3em;
 }
-
 footer p {
-	text-align: center;
-	font-size: .8em;
+  text-align: center;
+  font-size: 12*@px;
 }
-
 /* ==== MEDIA QUERIES ==== */
-
-@media screen and (max-width : 991px) {
-
-}
-
 @media (max-width: 767px) {
-
-	.navbar-nav .open .dropdown-menu {
-		background-color: #eee;
-	}
-
+  .navbar-nav .open .dropdown-menu {
+    background-color: @bg-grey;
+  }
 }
+/*# sourceMappingURL=custom.css.map */
